@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import reactDom from 'react-dom';
-import App from '../container';
+import Container from '../container';
 import reducer from '../reducer';
 import '../css/index.css';
 
@@ -17,6 +17,6 @@ const store = createStore(reducer, applyMiddleware(...middleWare));
 
 reactDom.render(
     <Provider store={store}>
-        <App />
+        <Container />
     </Provider>,
 document.querySelector("#root"));
